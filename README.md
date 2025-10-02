@@ -119,4 +119,24 @@ For questions or suggestions, please open an issue or submit a pull request.
 
 ---
 
+Khan Academy
+https://www.khanacademy.org/science/physics
+Free, high-quality video lessons and exercises on all physics topics, including kinematics.
+
+HyperPhysics
+http://hyperphysics.phy-astr.gsu.edu/
+Concept maps and concise explanations for physics concepts.
+
+MIT OpenCourseWare (OCW) Physics
+https://ocw.mit.edu/courses/physics/
+Free lecture notes, assignments, and exams from MIT’s physics courses.
+
+Physics Classroom
+https://www.physicsclassroom.com/
+Interactive tutorials and animations, especially good for kinematics and mechanics.
+
+Paul’s Online Math Notes (Physics Section)
+https://tutorial.math.lamar.edu/Classes/Phys/Phys.aspx
+Clear explanations and worked examples.
+
 *Last updated: September 30, 2025*
