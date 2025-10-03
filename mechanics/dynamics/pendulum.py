@@ -57,8 +57,10 @@ ax.set_aspect('equal')
 # Limb line
 line, = ax.plot([], [], 'o-', lw=4, color='red')
 # Velocity and acceleration vectors
-vel_vec = ax.arrow(0,0,0,0, head_width=0.05, head_length=0.1, fc='blue', ec='blue')
-acc_vec = ax.arrow(0,0,0,0, head_width=0.05, head_length=0.1, fc='green', ec='green')
+vel_vec = ax.arrow(0,0,0,0, head_width=0.05, head_length=0.1, 
+                   fc='blue', ec='blue')
+acc_vec = ax.arrow(0,0,0,0, head_width=0.05, head_length=0.1, 
+                   fc='green', ec='green')
 
 def update(frame):
     x = L * np.sin(theta[frame])
@@ -81,9 +83,11 @@ def update(frame):
     ax.patches = []
     
     # Draw velocity (blue)
-    ax.arrow(x, y, vx*0.1, vy*0.1, head_width=0.05, head_length=0.1, fc='blue', ec='blue')
+    ax.arrow(x, y, vx*0.1, vy*0.1, head_width=0.05, head_length=0.1, 
+             fc='blue', ec='blue')
     # Draw acceleration (green)
-    ax.arrow(x, y, ax_vec*0.1, ay_vec*0.1, head_width=0.05, head_length=0.1, fc='green', ec='green')
+    ax.arrow(x, y, ax_vec*0.1, ay_vec*0.1, head_width=0.05, 
+             head_length=0.1, fc='green', ec='green')
     
     return line,
 
