@@ -16,7 +16,10 @@ t = np.arange(0, t_max, dt)
 # Kinematics-only pendulum
 # θ(t) defined directly
 # ------------------------
-theta_kin = theta0 * np.cos(2 * t)  # some arbitrary motion
+
+# some arbitrary motion
+theta_kin = theta0 * np.cos(2 * t)
+
 omega_kin = np.gradient(theta_kin, dt)
 alpha_kin = np.gradient(omega_kin, dt)
 
@@ -31,10 +34,12 @@ theta_dyn[0] = theta0
 omega_dyn[0] = 0.0
 
 for i in range(1, len(t)):
-    alpha_dyn[i-1] = - (g / L) * theta_dyn[i-1]  # small-angle approximation
+    # small-angle approximation
+    alpha_dyn[i-1] = - (g / L) * theta_dyn[i-1]
+
     omega_dyn[i] = omega_dyn[i-1] + alpha_dyn[i-1] * dt
     theta_dyn[i] = theta_dyn[i-1] + omega_dyn[i] * dt
-    
+
 alpha_dyn[-1] = - (g / L) * theta_dyn[-1]
 
 # ------------------------
