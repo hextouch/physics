@@ -4,6 +4,28 @@ Classical mechanics is the branch of physics that deals with the motion of objec
 
 ## Key Topics
 
+## Mathematical Concepts Required (for all Mechanics subtopics)
+
+To master all subtopics in mechanics, you should be comfortable with the following math concepts:
+
+- **Scalars and vectors** (vector algebra, vector decomposition)
+- **Diff and integration** (for motion analysis, work, energy, rotational motion, oscillations)
+- **Reference frames**
+- **Graphical analysis of motion**
+- **Algebraic manipulation**
+- **Trigonometric identities** (especially for circular motion and oscillations)
+- **Radians and degrees** (for rotational motion)
+- **Vector cross product** (for torque and angular momentum)
+- **System of equations** (for multi-body problems)
+- **Differential equations** (for oscillations)
+
+These concepts are foundational for:
+- Kinematics: motion, derivatives, integrals, vectors
+- Dynamics: forces, free-body diagrams, equilibrium, Newton's laws
+- Energy & Momentum: work, energy, momentum, collisions
+- Rotational Motion: angular kinematics, moment of inertia, torque
+- Oscillations: SHM, damping, resonance, energy in oscillations
+
 ### Kinematics
 - Position, velocity, and acceleration
 - Equations of motion
