@@ -1,28 +1,33 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-def circular_motion(r, omega, t_max):
-    t = np.linspace(0, t_max, 200)
-    x = r * np.cos(omega * t)
-    y = r * np.sin(omega * t)
-    return t, x, y
+# Parameters
+r = 5
+t_max = 10
+dt = 0.01
+t = np.arange(0, t_max, dt)
 
-def plot_circular_motion(x, y, r, omega):
-    plt.figure(figsize=(5, 5))
-    plt.plot(x, y)
-    plt.title(f"Uniform Circular Motion: r={r} m, ω={omega} rad/s")
-    plt.xlabel("X (m)")
-    plt.ylabel("Y (m)")
-    plt.axis('equal')
-    plt.grid(True)
-    plt.show()
+# Non-constant angular acceleration example: alpha(t) = 0.5 * sin(t)
+alpha = 0.5 * np.sin(t)
+omega0 = 2
 
-def main():
-    r = float(input("Enter radius (m): "))
-    omega = float(input("Enter angular velocity (rad/s): "))
-    t_max = float(input("Enter total time (s): "))
-    t, x, y = circular_motion(r, omega, t_max)
-    plot_circular_motion(x, y, r, omega)
+# Numerical integration for angular velocity
+omega = omega0 + np.cumsum(alpha) * dt
 
-if __name__ == "__main__":
-    main()
+# Numerical integration for angular displacement
+theta = np.cumsum(omega) * dt
+
+# Linear velocities
+v_t = r * omega
+a_c = v_t**2 / r
+a_t = r * alpha
+
+# Plotting
+plt.figure(figsize=(12, 6))
+plt.plot(t, alpha, label="Angular Acceleration α(t)")
+plt.plot(t, omega, label="Angular Velocity ω(t)")
+plt.plot(t, theta, label="Angular Displacement θ(t)")
+plt.xlabel("Time (s)")
+plt.legend()
+plt.title("Non-Uniform Circular Motion")
+plt.show()
